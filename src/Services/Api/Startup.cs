@@ -6,6 +6,11 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using IdentityAdmin.Core.Entities;
+using IdentityAdmin.Core.Interfaces;
+using IdentityAdmin.Core.Validators;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
 
 namespace IdentityAdmin.Api
 {
@@ -25,10 +30,7 @@ namespace IdentityAdmin.Api
                 app.UseDeveloperExceptionPage();
             }
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            app.UseMvcWithDefaultRoute();
         }
     }
 }

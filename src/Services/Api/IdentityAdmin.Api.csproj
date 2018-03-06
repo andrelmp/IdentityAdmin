@@ -12,4 +12,8 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Core\IdentityAdmin.Core.csproj" />
+  </ItemGroup>
+
 </Project>
